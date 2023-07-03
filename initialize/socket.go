@@ -25,12 +25,12 @@ func SocketInit() {
 	}
 
 	//全局变量初始化
-	global.GoRouteOpen = make(map[string]bool)
-	global.SocketChan = make(map[string]chan bool)
-	global.SocketListen = make(map[string]net.Listener)
+	global.GoRouteOpen = make(map[string]bool)                 //对应端口的socket服务是否开启
+	global.SocketChan = make(map[string]chan bool)             //控制socket服务
+	global.SocketListen = make(map[string]net.Listener)        //socket句柄，用于控制指定端口的整个连接
 	global.SocketRoute = make(map[string]func(address string)) //初始化socket任务队列
-	global.SocketServerOpen = make(chan bool, 1)
-	global.SocketServerChan = make(map[string]chan bool)
+	global.SocketServerOpen = make(chan bool, 1)               //开启socket服务池
+	global.SocketServerChan = make(map[string]chan bool)       //控制开启指定socket监听服务
 
 	//初始化socket配置
 	for i := range dataDB {
