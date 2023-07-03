@@ -17,40 +17,6 @@ var goRouteOpenCount map[string]int
 
 func SocketServer() {
 
-	//work := <-global.SocketServerOpen
-	//if work != true {
-	//	return
-	//}
-	//
-	//fmt.Println("socket监听池开启")
-	//goRouteOpenCount = make(map[string]int)
-	//
-	////开启对应监听服务
-	//for i := range global.SocketAddr {
-	//	//变量覆盖
-	//	i := i
-	//	if goRouteOpenCount[getPort(global.SocketAddr[i])] == 0 && !global.GoRouteOpen[getPort(global.SocketAddr[i])] { //对应端口服务未开启
-	//		goRouteOpenCount[getPort(global.SocketAddr[i])]++
-	//		fmt.Println(getPort(global.SocketAddr[i]), "port")
-	//		go func() {
-	//			fmt.Println("GoRouteOpen")
-	//			//持续监听
-	//			for {
-	//				select {
-	//				case isOpen := <-global.SocketServerChan[getPort(global.SocketAddr[i])]:
-	//					if isOpen { //是否开启
-	//						fu := global.SocketRoute[getPort(global.SocketAddr[i])]
-	//						go fu(global.SocketAddr[i])
-	//					} else {
-	//
-	//					}
-	//				}
-	//			}
-	//		}()
-	//	}
-	//
-	//}
-
 	for {
 		select {
 		case work := <-global.SocketServerOpen:
