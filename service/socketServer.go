@@ -17,6 +17,8 @@ var goRouteOpenCount map[string]int
 
 func SocketServer() {
 
+	fmt.Println("SocketServer")
+
 	for {
 		select {
 		case work := <-global.SocketServerOpen:
