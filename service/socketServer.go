@@ -45,7 +45,7 @@ func SocketServer() {
 									fu := global.SocketRoute[getPort(global.SocketAddr[i])]
 									go fu(global.SocketAddr[i])
 								} else {
-
+									fmt.Println(getPort(global.SocketAddr[i]),"该协程已开启")
 								}
 							}
 						}
