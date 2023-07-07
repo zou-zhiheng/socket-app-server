@@ -7,6 +7,7 @@ import (
 )
 
 func init() {
+
 	initialize.Init()
 }
 
