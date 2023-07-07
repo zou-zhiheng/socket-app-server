@@ -13,7 +13,7 @@ func GetEngine() *gin.Engine {
 	engine.POST("/login", controller.UserLogin)
 
 	//权限
-	engine.Use(middleware.JWTAuth(), middleware.Auth())
+	//engine.Use(middleware.JWTAuth(), middleware.Auth())
 	//跨域
 	//用户
 	UserRouter(engine)
