@@ -8,9 +8,11 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
+const mongoURI = "mongodb://127.0.0.1:27017/?authSource=admin"
+
 func MongoInit() {
 	if global.MongoClient == nil {
-		global.MongoClient = getMongoClient("mongodb://127.0.0.1:27017/?authSource=admin")
+		global.MongoClient = getMongoClient(mongoURI)
 	}
 	appManager := global.MongoClient.Database("appManager")
 	{
