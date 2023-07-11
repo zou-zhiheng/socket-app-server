@@ -15,6 +15,7 @@ type CustomClaims struct {
 	jwt.StandardClaims
 }
 
+// SigningKey 签名
 var SigningKey = []byte("zouzhiheng@app")
 
 func CreateToken(user model.User) (string, error) {
