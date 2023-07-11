@@ -22,6 +22,7 @@ func CreateToken(user model.User) (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, CustomClaims{User: user,
 		StandardClaims: jwt.StandardClaims{
 			NotBefore: time.Now().Unix(), //签名生效时间
+			//声明过期时间
 			//ExpiresAt: time.Now().Unix() + 60*60*24*2, //2小时过期
 			Issuer:    "zzh", //签发人，
 		},
