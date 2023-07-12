@@ -6,6 +6,7 @@ import (
 	"app-server/service"
 )
 
+//项目运行初始配置
 func init() {
 	initialize.Init()
 }
