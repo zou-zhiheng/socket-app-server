@@ -4,11 +4,12 @@ import (
 	"app-server/initialize"
 	"app-server/router"
 	"app-server/service"
+	"fmt"
 )
 
-//项目运行初始配置
+// 项目运行初始配置
 func init() {
-
+	fmt.Println("test")
 	initialize.Init()
 }
 
