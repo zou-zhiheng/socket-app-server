@@ -9,11 +9,11 @@ import (
 
 // 项目运行初始配置
 func init() {
-	fmt.Println("test")
 	initialize.Init()
 }
 
 func main() {
+	fmt.Println("test")
 	//开启socket服务
 	go service.SocketServer()
 	engine := router.GetEngine()
