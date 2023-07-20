@@ -1,14 +1,14 @@
 package main
 
 import (
-	"app-server/initialize"
 	"app-server/router"
 	"app-server/service"
+	"fmt"
 )
 
 // 项目运行初始配置
 func init() {
-	initialize.Init()
+	//initialize.Init()
 }
 
 func main() {
@@ -18,4 +18,6 @@ func main() {
 	if err := engine.Run(":7001"); err != nil {
 		panic(err)
 	}
+	fmt.Println("3")
+
 }
