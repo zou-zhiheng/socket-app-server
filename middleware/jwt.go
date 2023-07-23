@@ -25,7 +25,7 @@ func CreateToken(user model.User) (string, error) {
 			NotBefore: time.Now().Unix(), //签名生效时间
 			//声明过期时间
 			//ExpiresAt: time.Now().Unix() + 60*60*24*2, //2小时过期
-			Issuer:    "zzh", //签发人，
+			Issuer: "zzh", //签发人，
 		},
 	})
 	//根据密钥生成加密token，token完整三部分
