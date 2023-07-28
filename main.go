@@ -14,7 +14,7 @@ func init() {
 
 func main() {
 	//开启socket服务
-	fmt.Println("radix")
+	fmt.Println("test")
 	go service.SocketServer()
 	engine := router.GetEngine()
 	if err := engine.Run(":7001"); err != nil {
